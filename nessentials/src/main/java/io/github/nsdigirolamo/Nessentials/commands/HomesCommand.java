@@ -25,10 +25,11 @@ public class HomesCommand implements CommandExecutor {
                 homeNames.add(home.getHomeName());
             }
 
-            player.sendMessage(ChatColor.GREEN + player.getDisplayName() + " Homes: " + homeNames);
+            String homeNamesToString = homeNames.toString().substring(1, homeNames.toString().length() - 1);
+
+            player.sendMessage(ChatColor.GREEN + player.getDisplayName() + " Homes: " + homeNamesToString);
             return true;
         }
-
         return false;
     }
 }

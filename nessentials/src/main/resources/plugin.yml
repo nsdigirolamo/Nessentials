@@ -6,11 +6,11 @@ commands:
   createhome:
     description: Create a home.
     permissions: nessentials.createhome
-    usage: /createhome <home name>
+    usage: /createhome <name>
   deletehome:
     description: Delete a home.
     permissions: nessentials.deletehome
-    usage: /deletehome <home name>
+    usage: /deletehome <name>
   homes:
     description: List homes.
     permissions: nessentials.homes
@@ -18,7 +18,7 @@ commands:
   home:
     description: Teleport to a home.
     permissions: nessentials.home
-    usage: /home <home name>
+    usage: /home <name>
   ping:
     description: Test your ping.
     permissions: nessentials.ping

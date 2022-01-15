@@ -19,24 +19,25 @@ public class DeleteHomeCommand implements CommandExecutor {
 
             Player player = (Player) sender;
 
+            // Check for only one argument passed by player.
             if (args.length == 1) {
 
                 ArrayList<Home> homes = HomeStorageUtil.findHomes(player.getUniqueId().toString(), args[0]);
 
-                if (homes.isEmpty()) {
-                    player.sendMessage(ChatColor.RED + "Home " + args[0] + " does not exist.");
-                } else {
+                // Check if a home was found with the given name.
+                if (!homes.isEmpty()) {
+
                     HomeStorageUtil.deleteHome(homes.get(0).getId());
                     player.sendMessage(ChatColor.YELLOW + "Deleted home "  + homes.get(0).getHomeName() + " successfully.");
-                }
 
+                } else {
+                    player.sendMessage(ChatColor.RED + "Home " + args[0] + " does not exist.");
+                }
             } else {
                 player.sendMessage(ChatColor.RED + "Invalid arguments! Proper usage: /deletehome <name>");
             }
-
             return true;
         }
-
         return false;
     }
 }

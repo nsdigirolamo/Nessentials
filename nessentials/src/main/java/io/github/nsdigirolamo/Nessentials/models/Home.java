@@ -1,25 +1,30 @@
 package io.github.nsdigirolamo.Nessentials.models;
 
+import org.bukkit.Location;
+import org.bukkit.entity.Player;
+
 import java.util.UUID;
 
 public class Home {
 
-    private String id;
+    private final String id;
     private String playerName;
     private String playerID;
     private String homeName;
-    private double xPosition;
-    private double yPosition;
-    private double zPosition;
+    private double x;
+    private double y;
+    private double z;
+    private String worldID;
 
-    public Home(String playerName, String playerID, String homeName, double xPosition, double yPosition, double zPosition) {
+    public Home(Player player, String homeName, Location location) {
         this.id = UUID.randomUUID().toString();
-        this.playerName = playerName;
-        this.playerID = playerID;
+        this.playerName = player.getPlayerListName();
+        this.playerID = player.getUniqueId().toString();
         this.homeName = homeName;
-        this.xPosition = xPosition;
-        this.yPosition = yPosition;
-        this.zPosition = zPosition;
+        this.x = location.getX();
+        this.y = location.getY();
+        this.z = location.getZ();
+        this.worldID = location.getWorld().getUID().toString();
     }
 
     public String getId() {
@@ -50,27 +55,35 @@ public class Home {
         this.homeName = homeName;
     }
 
-    public double getxPosition() {
-        return xPosition;
+    public double getX() {
+        return x;
     }
 
-    public void setxPosition(double xPosition) {
-        this.xPosition = xPosition;
+    public void setX(double x) {
+        this.x = x;
     }
 
-    public double getyPosition() {
-        return yPosition;
+    public double getY() {
+        return y;
     }
 
-    public void setyPosition(double yPosition) {
-        this.yPosition = yPosition;
+    public void setY(double y) {
+        this.y = y;
     }
 
-    public double getzPosition() {
-        return zPosition;
+    public double getZ() {
+        return z;
     }
 
-    public void setzPosition(double zPosition) {
-        this.zPosition = zPosition;
+    public void setZ(double z) {
+        this.z = z;
+    }
+
+    public String getWorldID() {
+        return worldID;
+    }
+
+    public void setWorldID(String worldID) {
+        this.worldID = worldID;
     }
 }

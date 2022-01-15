@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import io.github.nsdigirolamo.Nessentials.Nessentials;
 import io.github.nsdigirolamo.Nessentials.models.Home;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 import java.io.*;
@@ -20,14 +21,12 @@ public class HomeStorageUtil {
      * Creates a new home.
      * @param player The player the home belongs to.
      * @param homeName The name of the home.
-     * @param xPosition The x position of the home.
-     * @param yPosition The y position of the home.
-     * @param zPosition The z position of the home.
+     * @param location the location of the home.
      * @return The newly created home.
      */
-    public static Home createHome(Player player, String homeName, double xPosition, double yPosition, double zPosition) {
+    public static Home createHome(Player player, String homeName, Location location) {
 
-        Home home = new Home(player.getDisplayName(), player.getUniqueId().toString(), homeName, xPosition, yPosition, zPosition);
+        Home home = new Home(player, homeName, location);
         homes.add(home);
 
         try {
@@ -104,9 +103,9 @@ public class HomeStorageUtil {
             if (home.getId().equalsIgnoreCase(id)) {
                 home.setPlayerName(newHome.getPlayerName());
                 home.setHomeName(newHome.getHomeName());
-                home.setxPosition(newHome.getxPosition());
-                home.setyPosition(newHome.getxPosition());
-                home.setzPosition(newHome.getxPosition());
+                home.setX(newHome.getX());
+                home.setY(newHome.getY());
+                home.setZ(newHome.getZ());
 
                 try {
                     saveHomes();

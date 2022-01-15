@@ -1,5 +1,7 @@
 /home/nick/IdeaProjects/nessentials/src/main/java/io/github/nsdigirolamo/Nessentials/commands/DeleteHomeCommand.java
 /home/nick/IdeaProjects/nessentials/src/main/java/io/github/nsdigirolamo/Nessentials/commands/HomesCommand.java
+/home/nick/IdeaProjects/nessentials/src/main/java/io/github/nsdigirolamo/Nessentials/tabcompletions/HomeTabCompletion.java
+/home/nick/IdeaProjects/nessentials/src/main/java/io/github/nsdigirolamo/Nessentials/tabcompletions/DeleteHomeTabCompletion.java
 /home/nick/IdeaProjects/nessentials/src/main/java/io/github/nsdigirolamo/Nessentials/models/Home.java
 /home/nick/IdeaProjects/nessentials/src/main/java/io/github/nsdigirolamo/Nessentials/commands/CreateHomeCommand.java
 /home/nick/IdeaProjects/nessentials/src/main/java/io/github/nsdigirolamo/Nessentials/commands/HomeCommand.java

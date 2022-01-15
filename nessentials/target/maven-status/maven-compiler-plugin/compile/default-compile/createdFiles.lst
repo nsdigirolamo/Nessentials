@@ -1,6 +1,8 @@
 io/github/nsdigirolamo/Nessentials/commands/CreateHomeCommand.class
 io/github/nsdigirolamo/Nessentials/commands/DeleteHomeCommand.class
+io/github/nsdigirolamo/Nessentials/tabcompletions/DeleteHomeTabCompletion.class
 io/github/nsdigirolamo/Nessentials/commands/HomeCommand.class
+io/github/nsdigirolamo/Nessentials/tabcompletions/HomeTabCompletion.class
 io/github/nsdigirolamo/Nessentials/Nessentials.class
 io/github/nsdigirolamo/Nessentials/models/Home.class
 io/github/nsdigirolamo/Nessentials/commands/PingCommand.class
