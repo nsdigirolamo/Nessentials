@@ -1,0 +1,50 @@
+name: Nessentials
+version: '${project.version}'
+main: io.github.nsdigirolamo.Nessentials.Nessentials
+api-version: 1.18
+commands:
+  createhome:
+    description: Create a home.
+    permissions: nessentials.createhome
+    usage: /createhome <home name>
+  deletehome:
+    description: Delete a home.
+    permissions: nessentials.deletehome
+    usage: /deletehome <home name>
+  homes:
+    description: List homes.
+    permissions: nessentials.homes
+    usage: /homes
+  home:
+    description: Teleport to a home.
+    permissions: nessentials.home
+    usage: /home <home name>
+  ping:
+    description: Test your ping.
+    permissions: nessentials.ping
+    usage: /ping
+permissions:
+  nessentials.*:
+    description: Wildcard permission.
+    default: op
+    children:
+      nessentials.createhome: true
+      nessentials.deletehome: true
+      nessentials.homes: true
+      nessentials.home: true
+      nessentials.ping: true
+  nessentials.createhome:
+    description: Allow use of /createhome
+    default: true
+  nessentials.deletehome:
+    description: Allow use of /deletehome
+    default: true
+  nessentials.homes:
+    description: Allow use of /homes
+    default: true
+  nessentials.home:
+    description: Allow use of /home
+    default: true
+  nessentials.ping:
+    description: Allow use of /ping
+    default: true
